@@ -1,0 +1,174 @@
+.heading {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 50 px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #b86d29;
+  }
+   
+  .cartoon {
+    width: 90vmin;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+   
+  .cartoon *,
+  .cartoon *::before,
+  .cartoon *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+   
+  .cartoon {
+    --bg: #fff;
+    --skin1: #fff;
+    --skin2: #b86d29;
+  }
+   
+  .head {
+    width: 50%;
+    height: 52%;
+    border: 1.5vmin solid;
+    border-radius: 100% / 70% 80% 124% 120%;
+    /* border-bottom: 1vmin solid; var(--skin1); */
+    border-top: 1.25vmin solid;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background:
+      radial-gradient(100% 200% at 47% -10.5%, var(--skin1) 15%, #0000 0),
+      radial-gradient(at 80% -20%, var(--skin2) 30%, #0000 0),
+      radial-gradient(at 3% 30%, var(--skin2) 30%, #0000 0);
+    background-color: var(--skin1);
+    overflow: hidden;
+  }
+   
+  .nose {
+    width: 25%;
+    height: 12%;
+    background:
+      radial-gradient(at 20% 25%, #fff 10%, #0000 0);
+    background-color: #000;
+    border-radius: 70% / 30% 30% 120% 120%;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+   
+  .eye {
+    width: 22%;
+    height: 25%;
+    background: #00f;
+    border-radius: 100% / 100%;
+    box-shadow: 0 -0.5vmin 0 0.25vmin, 0 0.5vmin 0 0.25vmin;
+    background:
+      radial-gradient(circle at 35% 50%, #fff 12%, #0000 0),
+      radial-gradient(circle at 49% 40%, #fff 7%, #0000 0),
+      radial-gradient(circle at 50% 60%, #000 20%, #b86d29 21% 40%, #000 41% 45%, #0000 46%);
+    background-color: #fff;
+    top: 23%;
+    left: 15%;
+    transform: rotate(-5deg);
+  }
+   
+  .eye+.eye {
+    left: auto;
+    right: 15%;
+    transform: rotate(5deg);
+    box-shadow:
+      0 -0.5vmin 0 0.25vmin,
+      0 0.5vmin 0 0.25vmin,
+      0 -4vmin 0 5vmin var(--skin2);
+  }
+   
+  .snout {
+    width: 30%;
+    height: 20%;
+    border-radius: 100% / 00% 40% 100% 130%;
+    border: 0.75vmin solid;
+    border-top-color: var(--skin1);
+    top: 63%;
+    left: 50%;
+    transform: translate(-100%);
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+    background: radial-gradient(circle at 20% 40%, #000 5%, #0000 0), radial-gradient(circle at 54% 71%, #000 5%, #0000 0), radial-gradient(circle at 70% 60%, #000 5%, #0000 0), radial-gradient(circle at 50% 50%, #000 7%, #0000 0), radial-gradient(circle at 33% 66%, #000 5%, #0000 0);
+    background-color: var(--skin1);
+  }
+   
+  .snout+.snout {
+    transform: scaleX(-1);
+    left: calc(50% - 0.375vmin);
+  }
+   
+  .line {
+    width: 70%;
+    height: 10%;
+    border: 0.5vmin solid #0000;
+    border-top: 1vmin solid;
+    border-radius: 100%;
+    top: 66.9%;
+    left: 50%;
+    transform: translateX(-50%) rotate(0.25deg);
+  }
+   
+  .tongue {
+    width: 20%;
+    height: 20%;
+    border: 0.7vmin solid;
+    border-bottom: 1vmin solid;
+    background: linear-gradient(#000 0 0) 45% 15% / 8% 50% no-repeat;
+    background-color: #b86d29;
+    border-radius: 0 0 10vmin 10vmin;
+    left: 50%;
+    top: 73%;
+    transform: translate(-50%, 0) rotate(5deg);
+  }
+   
+  .collar {
+    width: 33%;
+    height: 25%;
+    border-radius: 100% / 50%;
+    background: #b86d29;
+    border: 0.8vmin solid;
+    border-bottom: 1vmin solid;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+   
+  .ear {
+    width: 30%;
+    height: 40%;
+    background: #b86d29;
+    border-radius: 120% 50%;
+    border: 1vmin solid;
+    border-left: 1.25vmin solid;
+    top: 13%;
+    left: 13%;
+  }
+   
+  .ear+.ear {
+    left: auto;
+    right: 15%;
+    top: 13%;
+    transform: scaleX(-1) rotate(20deg);
+    border-radius: 50%;
+   
+   
+    @keyframes float {
+   
+      0%,
+      100% {
+        transform: translate(0, -110%);
+      }
+   
+      50% {
+        transform: translate(0, -125%);
+      }
+    }
+}
